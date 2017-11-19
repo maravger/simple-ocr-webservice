@@ -25,12 +25,12 @@ class FileUploadView(APIView):
     def post(self, request, filename, format='jpg'):
 
         src_img = request.data['file']
-        dest_img = './tmp/'+datetime.datetime.now().isoformat()+src_img.name
+        dest_img = '/srv/t4ct/tmp/'+datetime.datetime.now().isoformat()+src_img.name
         
         with open(dest_img, 'wb+' ) as dest:
             for c in src_img.chunks():
                 dest.write(c)
-            
+        
         lines = open(dest_img).readlines()
         open(dest_img, 'wb+').writelines(lines[4:-1])
 
@@ -40,5 +40,4 @@ class FileUploadView(APIView):
             os.remove(dest_img)
         else:
             print("Error: temp file not found")
-
         return Response(pytesseract.image_to_string(to_ocr), status.HTTP_201_CREATED)

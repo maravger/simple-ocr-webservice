@@ -25,7 +25,7 @@ SECRET_KEY = '4tk6618gw@_7mswc3(*uwkpv1az60%d(nuu0!1o3uwz^r__fdj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'edgy.netmode.ntua.gr']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'edgy.netmode.ntua.gr', '10.0.0.50', '192.168.3.10']
 
 
 # Application definition
