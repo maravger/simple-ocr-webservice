@@ -12,7 +12,7 @@ functools32==3.2.3.post2
 ipaddress==1.0.18
 jsonschema==2.6.0
 olefile==0.44
-Pillow==4.3.0
+Pillow==7.1.0
 pytesseract==0.1.7
 pytz==2017.2
 PyYAML==3.12
